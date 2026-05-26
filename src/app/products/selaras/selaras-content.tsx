@@ -135,6 +135,83 @@ export function SelarasContent() {
           </div>
         </section>
 
+        {/* ── Pricing: Technical Specification Sheet ── */}
+        <section className="grid grid-cols-1 lg:grid-cols-12 border-b border-slate-300 bg-white">
+          <div className="lg:col-span-4 p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-slate-300 bg-slate-900 text-white flex flex-col justify-between">
+             <div>
+                <h2 className="font-mono text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-4 border-b border-slate-800 pb-2">
+                  Licensing Parameters
+                </h2>
+                <h3 className="text-4xl font-bold tracking-tight uppercase mb-6">Allocation</h3>
+                <p className="text-sm text-slate-400 font-medium leading-relaxed">
+                  Transparent resource allocation models designed for engineering firms scaling their infrastructure.
+                </p>
+             </div>
+             <ShieldCheck className="w-16 h-16 text-slate-800 mt-12" />
+          </div>
+
+          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2">
+            {/* Free Trial Spec */}
+            <div className="p-8 lg:p-12 border-b md:border-b-0 md:border-r border-slate-300 flex flex-col">
+               <div className="font-mono text-[10px] uppercase tracking-widest text-slate-400 mb-2">Evaluation Phase</div>
+               <h4 className="text-2xl font-bold text-slate-900 uppercase tracking-tight mb-2">Free Plan</h4>
+               <div className="font-mono text-xl font-bold text-slate-900 mb-8 border-b border-slate-200 pb-8">
+                 IDR 0 <span className="text-[10px] text-slate-400 tracking-normal uppercase ml-1">/ 3 Months</span>
+               </div>
+               
+               <div className="space-y-4 mb-12 flex-grow">
+                  {[
+                    ['Seats', '6 Users'],
+                    ['Storage', '100 MB'],
+                    ['Validity', '3 Months'],
+                    ['Features', 'MDR, Workflows, Transmittal, Audit']
+                  ].map(([label, val]) => (
+                    <div key={label} className="flex justify-between text-xs font-mono border-b border-slate-100 pb-2">
+                      <span className="text-slate-500 uppercase">{label}</span>
+                      <span className="text-slate-900 font-bold text-right">{val}</span>
+                    </div>
+                  ))}
+               </div>
+               
+               <Button asChild className="w-full bg-slate-100 text-slate-900 hover:bg-slate-200 rounded-none h-12 font-mono text-[10px] uppercase tracking-widest">
+                  <Link href="https://selaras.prerana.id">Start for Free</Link>
+               </Button>
+            </div>
+
+            {/* Pro Spec */}
+            <div className="p-8 lg:p-12 bg-blue-50/30 flex flex-col relative overflow-hidden">
+               <div className="absolute top-0 right-0 bg-red-600 text-white font-mono text-[8px] uppercase tracking-widest px-2 py-1">
+                 SAVE 50%
+               </div>
+               
+               <div className="font-mono text-[10px] uppercase tracking-widest text-blue-600 mb-2">Production Phase</div>
+               <h4 className="text-2xl font-bold text-slate-900 uppercase tracking-tight mb-2">Pro Plan</h4>
+               <div className="font-mono text-xl font-bold text-slate-900 mb-8 border-b border-blue-200 pb-8">
+                 <span className="text-sm line-through text-slate-400 mr-2">IDR 2.000.000</span>
+                 IDR 999.000 <span className="text-[10px] text-slate-400 tracking-normal uppercase ml-1">/ Month</span>
+               </div>
+               
+               <div className="space-y-4 mb-12 flex-grow">
+                  {[
+                    ['Seats', '15 Users'],
+                    ['Storage', '5 GB'],
+                    ['Validity', '1 Year'],
+                    ['Features', 'Multi-Project, Client Portal, Priority']
+                  ].map(([label, val]) => (
+                    <div key={label} className="flex justify-between text-xs font-mono border-b border-blue-100/50 pb-2">
+                      <span className="text-slate-600 uppercase">{label}</span>
+                      <span className="text-slate-900 font-bold text-right">{val}</span>
+                    </div>
+                  ))}
+               </div>
+               
+               <Button asChild className="w-full bg-blue-600 text-white hover:bg-blue-700 rounded-none h-12 font-mono text-[10px] uppercase tracking-widest shadow-md">
+                  <Link href="https://selaras.prerana.id">Start Pro Plan</Link>
+               </Button>
+            </div>
+          </div>
+        </section>
+
         {/* ── Architecture (Features): Table Layout ── */}
         <section id="architecture" className="border-b border-slate-300">
           <div className="grid grid-cols-1 md:grid-cols-12">
@@ -163,83 +240,6 @@ export function SelarasContent() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── Pricing: Technical Specification Sheet ── */}
-        <section className="grid grid-cols-1 lg:grid-cols-12 border-b border-slate-300 bg-white">
-          <div className="lg:col-span-4 p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-slate-300 bg-slate-900 text-white flex flex-col justify-between">
-             <div>
-                <h2 className="font-mono text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-4 border-b border-slate-800 pb-2">
-                  Licensing Parameters
-                </h2>
-                <h3 className="text-4xl font-bold tracking-tight uppercase mb-6">Allocation</h3>
-                <p className="text-sm text-slate-400 font-medium leading-relaxed">
-                  Transparent resource allocation models designed for engineering firms scaling their infrastructure.
-                </p>
-             </div>
-             <ShieldCheck className="w-16 h-16 text-slate-800 mt-12" />
-          </div>
-
-          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2">
-            {/* Free Trial Spec */}
-            <div className="p-8 lg:p-12 border-b md:border-b-0 md:border-r border-slate-300 flex flex-col">
-               <div className="font-mono text-[10px] uppercase tracking-widest text-slate-400 mb-2">Evaluation Phase</div>
-               <h4 className="text-2xl font-bold text-slate-900 uppercase tracking-tight mb-2">Paket Gratis</h4>
-               <div className="font-mono text-xl font-bold text-slate-900 mb-8 border-b border-slate-200 pb-8">
-                 Rp 0 <span className="text-[10px] text-slate-400 tracking-normal uppercase ml-1">/ 3 Bulan</span>
-               </div>
-               
-               <div className="space-y-4 mb-12 flex-grow">
-                  {[
-                    ['Seats', '6 Pengguna'],
-                    ['Storage', '100 MB'],
-                    ['Masa Aktif', '3 Bulan'],
-                    ['Features', 'MDR, Workflows, Transmittal, Audit']
-                  ].map(([label, val]) => (
-                    <div key={label} className="flex justify-between text-xs font-mono border-b border-slate-100 pb-2">
-                      <span className="text-slate-500 uppercase">{label}</span>
-                      <span className="text-slate-900 font-bold text-right">{val}</span>
-                    </div>
-                  ))}
-               </div>
-               
-               <Button asChild className="w-full bg-slate-100 text-slate-900 hover:bg-slate-200 rounded-none h-12 font-mono text-[10px] uppercase tracking-widest">
-                  <Link href="https://selaras.prerana.id">Mulai Gratis</Link>
-               </Button>
-            </div>
-
-            {/* Pro Spec */}
-            <div className="p-8 lg:p-12 bg-blue-50/30 flex flex-col relative overflow-hidden">
-               <div className="absolute top-0 right-0 bg-red-600 text-white font-mono text-[8px] uppercase tracking-widest px-2 py-1">
-                 HEMAT 50%
-               </div>
-               
-               <div className="font-mono text-[10px] uppercase tracking-widest text-blue-600 mb-2">Production Phase</div>
-               <h4 className="text-2xl font-bold text-slate-900 uppercase tracking-tight mb-2">Paket Pro</h4>
-               <div className="font-mono text-xl font-bold text-slate-900 mb-8 border-b border-blue-200 pb-8">
-                 <span className="text-sm line-through text-slate-400 mr-2">Rp 2.000.000</span>
-                 Rp 999.000 <span className="text-[10px] text-slate-400 tracking-normal uppercase ml-1">/ Bulan</span>
-               </div>
-               
-               <div className="space-y-4 mb-12 flex-grow">
-                  {[
-                    ['Seats', '15 Pengguna'],
-                    ['Storage', '5 GB'],
-                    ['Masa Aktif', '1 Tahun'],
-                    ['Features', 'Multi-Project, Client Portal, Priority']
-                  ].map(([label, val]) => (
-                    <div key={label} className="flex justify-between text-xs font-mono border-b border-blue-100/50 pb-2">
-                      <span className="text-slate-600 uppercase">{label}</span>
-                      <span className="text-slate-900 font-bold text-right">{val}</span>
-                    </div>
-                  ))}
-               </div>
-               
-               <Button asChild className="w-full bg-blue-600 text-white hover:bg-blue-700 rounded-none h-12 font-mono text-[10px] uppercase tracking-widest shadow-md">
-                  <Link href="https://selaras.prerana.id">Mulai Paket Pro</Link>
-               </Button>
             </div>
           </div>
         </section>
