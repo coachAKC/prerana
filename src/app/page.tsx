@@ -173,7 +173,7 @@ export default function PreranaHome() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="md:col-span-1 bg-white rounded-[2.5rem] p-8 border border-slate-100 flex flex-col justify-between group cursor-pointer shadow-sm hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 min-h-[280px] relative overflow-hidden"
+            className="md:col-span-2 bg-white rounded-[2.5rem] p-8 border border-slate-100 flex flex-col justify-between group cursor-pointer shadow-sm hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 min-h-[280px] relative overflow-hidden"
           >
             <Link href="https://selaras.prerana.id" className="absolute inset-0 z-20" />
             <div className="relative z-10">
