@@ -167,79 +167,108 @@ export function SelarasContent() {
           </div>
         </section>
 
-        {/* ── Pricing: Technical Specification Sheet ── */}
-        <section className="grid grid-cols-1 lg:grid-cols-12 border-b border-slate-300 bg-white">
-          <div className="lg:col-span-4 p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-slate-300 bg-slate-900 text-white flex flex-col justify-between">
-             <div>
-                <h2 className="font-mono text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-4 border-b border-slate-800 pb-2">
-                  Licensing Parameters
-                </h2>
-                <h3 className="text-4xl font-bold tracking-tight uppercase mb-6">Allocation</h3>
-                <p className="text-sm text-slate-400 font-medium leading-relaxed">
-                  Transparent resource allocation models designed for engineering firms scaling their infrastructure.
-                </p>
-             </div>
-             <ShieldCheck className="w-16 h-16 text-slate-800 mt-12" />
-          </div>
-
-          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2">
-            {/* Free Trial Spec */}
-            <div className="p-8 lg:p-12 border-b md:border-b-0 md:border-r border-slate-300 flex flex-col">
-               <div className="font-mono text-[10px] uppercase tracking-widest text-slate-400 mb-2">Evaluation Phase</div>
-               <h4 className="text-2xl font-bold text-slate-900 uppercase tracking-tight mb-2">Trial Base</h4>
-               <div className="font-mono text-xl font-bold text-slate-900 mb-8 border-b border-slate-200 pb-8">
-                 IDR 0 <span className="text-[10px] text-slate-400 tracking-normal uppercase ml-1">/ 3 Months</span>
-               </div>
-               
-               <div className="space-y-4 mb-12 flex-grow">
-                  {[
-                    ['Seats', 'Max 6 Users'],
-                    ['Storage', 'Limited (500MB)'],
-                    ['Versioning', 'Standard'],
-                    ['Support', 'Community SLA']
-                  ].map(([label, val]) => (
-                    <div key={label} className="flex justify-between text-xs font-mono border-b border-slate-100 pb-2">
-                      <span className="text-slate-500 uppercase">{label}</span>
-                      <span className="text-slate-900 font-bold text-right">{val}</span>
-                    </div>
-                  ))}
-               </div>
-               
-               <Button asChild className="w-full bg-slate-100 text-slate-900 hover:bg-slate-200 rounded-none h-12 font-mono text-[10px] uppercase tracking-widest">
-                  <Link href="https://selaras.prerana.id">Initiate Trial</Link>
-               </Button>
+        {/* ── Pricing ── */}
+        <section className="bg-slate-50 py-24 px-6 border-t border-slate-200 relative">
+          <div className="absolute inset-0 opacity-[0.4]" style={{ backgroundImage: 'radial-gradient(#cbd5e1 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+          <div className="max-w-4xl mx-auto relative z-10">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">Mulai gratis. Upgrade kapan saja.</h2>
+              <p className="text-lg text-slate-500">Pilih paket yang sesuai dengan ukuran tim dan kebutuhan proyek Anda.<br/>Tidak ada biaya tersembunyi.</p>
             </div>
 
-            {/* Pro Spec */}
-            <div className="p-8 lg:p-12 bg-blue-50/30 flex flex-col relative overflow-hidden">
-               <div className="absolute top-0 right-0 bg-blue-600 text-white font-mono text-[8px] uppercase tracking-widest px-2 py-1">
-                 Recommended Spec
-               </div>
-               
-               <div className="font-mono text-[10px] uppercase tracking-widest text-blue-600 mb-2">Production Phase</div>
-               <h4 className="text-2xl font-bold text-slate-900 uppercase tracking-tight mb-2">Professional</h4>
-               <div className="font-mono text-xl font-bold text-slate-900 mb-8 border-b border-blue-200 pb-8">
-                 IDR 750,000 <span className="text-[10px] text-slate-400 tracking-normal uppercase ml-1">/ Month</span>
-               </div>
-               
-               <div className="space-y-4 mb-12 flex-grow">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              {/* Paket Gratis */}
+              <div className="bg-white rounded-xl p-8 border border-slate-200 shadow-sm flex flex-col">
+                <div className="mb-6">
+                  <span className="inline-block px-3 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold uppercase tracking-widest rounded-md mb-4">Free</span>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-3">Paket Gratis</h3>
+                  <p className="text-sm text-slate-500 leading-relaxed min-h-[60px]">
+                    Cocok untuk tim kecil yang baru memulai pengelolaan dokumen engineering secara digital.
+                  </p>
+                </div>
+                
+                <div className="mb-8">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-xl font-bold text-slate-900">Rp</span>
+                    <span className="text-5xl font-bold text-slate-900 tracking-tighter">0</span>
+                    <span className="text-sm text-slate-400">/ 3 bulan</span>
+                  </div>
+                </div>
+
+                <div className="space-y-4 mb-8 flex-grow">
                   {[
-                    ['Seats', '10 Users'],
-                    ['Storage', '1 GB Secure Volume'],
-                    ['Versioning', 'Unlimited Immutable'],
-                    ['Support', 'Priority SLA']
-                  ].map(([label, val]) => (
-                    <div key={label} className="flex justify-between text-xs font-mono border-b border-blue-100/50 pb-2">
-                      <span className="text-slate-600 uppercase">{label}</span>
-                      <span className="text-slate-900 font-bold text-right">{val}</span>
+                    '6 pengguna (seats)',
+                    '100 MB penyimpanan',
+                    'Masa aktif 3 bulan',
+                    'Master Document Register (MDR)',
+                    'Review & Approval workflow',
+                    'Transmittal management',
+                    'Audit log lengkap'
+                  ].map((feature) => (
+                    <div key={feature} className="flex items-start gap-3">
+                      <div className="mt-0.5 rounded-full bg-green-100 p-0.5 flex-shrink-0">
+                        <Check className="w-3 h-3 text-green-600" strokeWidth={3} />
+                      </div>
+                      <span className="text-sm text-slate-600">{feature}</span>
                     </div>
                   ))}
-               </div>
-               
-               <Button asChild className="w-full bg-blue-600 text-white hover:bg-blue-700 rounded-none h-12 font-mono text-[10px] uppercase tracking-widest shadow-md">
-                  <Link href="https://selaras.prerana.id">Upgrade Capacity</Link>
-               </Button>
+                </div>
+
+                <Button asChild variant="outline" className="w-full h-12 rounded-md font-bold border-slate-300 text-slate-900 hover:bg-slate-50">
+                  <Link href="https://selaras.prerana.id">Mulai Gratis</Link>
+                </Button>
+              </div>
+
+              {/* Paket Pro */}
+              <div className="bg-white rounded-xl p-8 border-2 border-blue-500 shadow-lg flex flex-col relative">
+                <div className="mb-6">
+                  <span className="inline-block px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-widest rounded-md mb-4">Pro</span>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-3">Paket Pro</h3>
+                  <p className="text-sm text-slate-500 leading-relaxed min-h-[60px]">
+                    Untuk tim engineering yang aktif — kapasitas lebih besar, masa aktif lebih panjang, dan akses fitur lengkap.
+                  </p>
+                </div>
+                
+                <div className="mb-8">
+                  <div className="text-sm text-slate-400 line-through mb-1">Rp 2.000.000 / bulan</div>
+                  <div className="flex items-baseline gap-2 mb-2">
+                    <span className="text-xl font-bold text-slate-900">Rp</span>
+                    <span className="text-5xl font-bold text-blue-600 tracking-tighter">999.000</span>
+                    <span className="text-sm text-slate-400">/ bulan</span>
+                  </div>
+                  <span className="inline-block px-2 py-1 bg-red-50 text-red-600 text-[10px] font-bold uppercase tracking-widest rounded border border-red-100">
+                    Harga Promo — Hemat 50%
+                  </span>
+                </div>
+
+                <div className="space-y-4 mb-8 flex-grow">
+                  {[
+                    '15 pengguna (seats)',
+                    '5 GB penyimpanan',
+                    'Masa aktif 1 tahun',
+                    'Semua fitur Free',
+                    'Multi-project support',
+                    'Client portal access',
+                    'Priority support via email'
+                  ].map((feature) => (
+                    <div key={feature} className="flex items-start gap-3">
+                      <div className="mt-0.5 rounded-full bg-green-100 p-0.5 flex-shrink-0">
+                        <Check className="w-3 h-3 text-green-600" strokeWidth={3} />
+                      </div>
+                      <span className="text-sm text-slate-600">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <Button asChild className="w-full h-12 rounded-md font-bold bg-blue-600 text-white hover:bg-blue-700">
+                  <Link href="https://selaras.prerana.id">Mulai Paket Pro</Link>
+                </Button>
+              </div>
             </div>
+
+            <p className="text-center text-xs text-slate-400 max-w-2xl mx-auto leading-relaxed font-mono">
+              Harga belum termasuk PPN 11%. Pembayaran melalui Virtual Account, QRIS, atau e-wallet. Butuh lebih banyak seats atau storage? <a href="#" className="text-blue-600 hover:underline">Hubungi kami</a>.
+            </p>
           </div>
         </section>
 
