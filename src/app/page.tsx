@@ -168,11 +168,40 @@ export default function PreranaHome() {
             </div>
           </motion.div>
 
-          {/* 3. Vanta Block: The High-Performance Workbench */}
+          {/* 3. Selaras Block: The EDMS */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
+            className="md:col-span-1 bg-white rounded-[2.5rem] p-8 border border-slate-100 flex flex-col justify-between group cursor-pointer shadow-sm hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 min-h-[280px] relative overflow-hidden"
+          >
+            <Link href="https://selaras.prerana.id" className="absolute inset-0 z-20" />
+            <div className="relative z-10">
+              <div className="flex justify-between items-start mb-6">
+                <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 group-hover:bg-blue-50 transition-colors relative overflow-hidden p-2 group-hover:scale-110 duration-500">
+                  <Image src="/icon-512.png" alt="Selaras Logo" fill className="object-contain p-2" />
+                </div>
+                <div className="w-8 h-8 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-300 group-hover:text-blue-600 group-hover:bg-white group-hover:border-blue-100 transition-all duration-500">
+                  <ArrowUpRight className="w-4 h-4" />
+                </div>
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-1 italic tracking-tight">Selaras.</h3>
+              <p className="text-[9px] font-black uppercase tracking-[0.2em] text-blue-600/80 mb-4">EDMS System</p>
+              <p className="text-xs text-slate-500 font-medium leading-relaxed">
+                Enterprise-grade engineering document management.
+              </p>
+            </div>
+            <div className="inline-flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.2em] text-blue-600 mt-4 relative z-10">
+              <ShieldCheck className="w-3.5 h-3.5" />
+              Secure Vault
+            </div>
+          </motion.div>
+
+          {/* 4. Vanta Block: The High-Performance Workbench */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
             className="md:col-span-2 bg-[#050505] rounded-[3rem] p-10 flex flex-col justify-between border border-white/10 relative overflow-hidden group cursor-pointer shadow-2xl transition-all duration-500 hover:bg-[#0A0A0A] min-h-[320px]"
           >
             <Link href="https://vanta.prerana.id" className="absolute inset-0 z-20" />
@@ -195,35 +224,6 @@ export default function PreranaHome() {
             </div>
             <div className="font-mono text-[8px] text-white/10 uppercase tracking-[0.4em] mt-6">
               RUST_CORE // TAURI_ENGINE // LOCAL_FIRST
-            </div>
-          </motion.div>
-
-          {/* 4. Selaras Block: The EDMS */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="md:col-span-1 bg-white rounded-[2.5rem] p-8 border border-slate-100 flex flex-col justify-between group cursor-pointer shadow-sm hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 min-h-[280px] relative overflow-hidden"
-          >
-            <Link href="https://selaras.prerana.id" className="absolute inset-0 z-20" />
-            <div className="relative z-10">
-              <div className="flex justify-between items-start mb-6">
-                <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 group-hover:text-blue-600 group-hover:bg-blue-50 transition-colors">
-                  <Database className="w-6 h-6" />
-                </div>
-                <div className="w-8 h-8 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-300 group-hover:text-blue-600 group-hover:bg-white group-hover:border-blue-100 transition-all duration-500">
-                  <ArrowUpRight className="w-4 h-4" />
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-1 italic tracking-tight">Selaras.</h3>
-              <p className="text-[9px] font-black uppercase tracking-[0.2em] text-blue-600/80 mb-4">EDMS System</p>
-              <p className="text-xs text-slate-500 font-medium leading-relaxed">
-                Enterprise-grade engineering document management.
-              </p>
-            </div>
-            <div className="inline-flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.2em] text-blue-600 mt-4 relative z-10">
-              <ShieldCheck className="w-3.5 h-3.5" />
-              Secure Vault
             </div>
           </motion.div>
 
