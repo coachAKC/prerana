@@ -185,15 +185,20 @@ export default function PreranaHome() {
                   <ArrowUpRight className="w-4 h-4" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-1 italic tracking-tight">Selaras.</h3>
-              <p className="text-[9px] font-black uppercase tracking-[0.2em] text-blue-600/80 mb-4">EDMS System</p>
-              <p className="text-xs text-slate-500 font-medium leading-relaxed">
-                Enterprise-grade engineering document management.
+              <h3 className="text-3xl font-bold tracking-tight text-slate-900 mb-1 italic">Selaras.</h3>
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600/80 mb-4">Engineering Document Management</p>
+              <p className="text-base text-slate-500 font-medium leading-relaxed max-w-md">
+                Enterprise-grade document control. Streamline your workflows with secure versioning, automated approvals, and real-time collaboration built for complex engineering projects.
               </p>
             </div>
-            <div className="inline-flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.2em] text-blue-600 mt-4 relative z-10">
-              <ShieldCheck className="w-3.5 h-3.5" />
-              Secure Vault
+            <div className="flex gap-2 relative z-10 mt-6">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-50/50 rounded-full text-[9px] font-black uppercase tracking-widest text-blue-600 border border-blue-100 shadow-sm">
+                <ShieldCheck className="w-3 h-3" />
+                Secure Vault
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-white rounded-full text-[9px] font-black uppercase tracking-widest text-slate-400 border border-slate-100 shadow-sm">
+                Compliance
+              </span>
             </div>
           </motion.div>
 
