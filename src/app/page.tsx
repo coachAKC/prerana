@@ -184,10 +184,10 @@ export default function PreranaHome() {
       </section>
 
       {/* SECTION 5: ABOUT & CONTACT */}
-      <section className="relative h-screen w-full flex items-center bg-[#FDFCFB] sticky top-0 overflow-hidden shadow-2xl z-50">
+      <section className="relative min-h-screen py-32 w-full flex items-center bg-[#FDFCFB] overflow-hidden shadow-2xl z-50">
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
         
-        <div className="max-w-4xl mx-auto w-full px-6 flex flex-col items-center text-center relative z-10">
+        <div className="max-w-6xl mx-auto w-full px-6 flex flex-col items-center text-center relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -205,15 +205,52 @@ export default function PreranaHome() {
               We are a collective of designers and engineers dedicated to solving people problems. We build professional instruments that get out of your way so you can do your best work.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="mailto:info@prerana.id" className="px-8 py-4 bg-slate-900 text-white rounded-full font-bold shadow-xl shadow-slate-900/10 hover:bg-slate-800 transition-colors flex items-center gap-2 group">
-                Solve it with us
-                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </Link>
-              <Link href="/suite" className="px-8 py-4 bg-white text-slate-900 border border-slate-200 rounded-full font-bold shadow-sm hover:bg-slate-50 transition-colors">
-                Explore our full suite
-              </Link>
-            </div>
+            <form action="https://formsubmit.co/resha@prerana.id" method="POST" className="mt-8 w-full max-w-5xl mx-auto text-left relative z-20">
+              <input type="hidden" name="_subject" value="New Prerana Request" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://prerana.id" />
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Left Column */}
+                <div className="flex flex-col gap-5">
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="name" className="text-[10px] font-black uppercase tracking-widest text-slate-400">Name</label>
+                    <input type="text" id="name" name="name" required className="px-5 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all text-slate-900 text-sm shadow-sm font-medium" placeholder="Your name" />
+                  </div>
+
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="email" className="text-[10px] font-black uppercase tracking-widest text-slate-400">Email Address</label>
+                    <input type="email" id="email" name="email" required className="px-5 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all text-slate-900 text-sm shadow-sm font-medium" placeholder="you@company.com" />
+                  </div>
+
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="interest" className="text-[10px] font-black uppercase tracking-widest text-slate-400">Area of Interest</label>
+                    <select id="interest" name="interest" className="px-5 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all text-slate-900 text-sm shadow-sm font-medium appearance-none">
+                      <option value="General Inquiry">General Inquiry</option>
+                      <option value="Krea">Krea (Engagement & Training)</option>
+                      <option value="Selaras">Selaras (Document Control)</option>
+                      <option value="Vanta">Vanta (Freelance Workspace)</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Right Column */}
+                <div className="flex flex-col gap-2 h-full">
+                  <label htmlFor="message" className="text-[10px] font-black uppercase tracking-widest text-slate-400">Message</label>
+                  <textarea id="message" name="message" required className="flex-1 px-5 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all text-slate-900 text-sm shadow-sm font-medium resize-none min-h-[200px]" placeholder="How can we solve it with you?"></textarea>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+                <button type="submit" className="w-full sm:w-auto px-10 py-5 bg-slate-900 text-white rounded-2xl font-bold shadow-xl shadow-slate-900/10 hover:bg-slate-800 transition-colors flex items-center justify-center gap-3 group">
+                  Solve it with us
+                  <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </button>
+                <Link href="/suite" className="w-full sm:w-auto px-10 py-5 bg-white text-slate-900 border border-slate-200 rounded-2xl font-bold shadow-sm hover:bg-slate-50 transition-colors text-center">
+                  Explore suite
+                </Link>
+              </div>
+            </form>
           </motion.div>
         </div>
       </section>
