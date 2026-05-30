@@ -12,7 +12,8 @@
   --color-text: #0F172A;
   --color-text-muted: #64748B;
 
-  --font-sans: system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   --radius-3xl: 1.5rem;

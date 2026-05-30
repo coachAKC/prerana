@@ -40,13 +40,13 @@ const SUITE_DATA = [
   },
   {
     name: 'Selaras.',
-    logo: null,
-    href: '#',
-    status: 'Coming Soon',
+    logo: '/icon-512.png',
+    href: '/products/selaras',
+    status: 'Active',
     pain: 'The fragmentation of engineering knowledge and the risk of digital loss in complex projects.',
     offering: 'An engineering-grade document management system focused on version integrity and secure collaboration.',
     theme: 'bg-white border-slate-100 text-slate-900',
-    accent: 'text-slate-400',
+    accent: 'text-blue-600',
     icon: Database
   }
 ]
@@ -54,21 +54,7 @@ const SUITE_DATA = [
 export default function SuitePage() {
   return (
     <div className="min-h-screen bg-[#FDFCFB] text-slate-900 selection:bg-orange-100 selection:text-orange-900 overflow-x-hidden font-sans">
-      {/* ── Navbar ── */}
-      <header className="sticky top-0 z-50 bg-white/40 backdrop-blur-xl border-b border-orange-100/30 px-6 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center shadow-lg shadow-orange-200 group-hover:scale-110 transition-transform">
-              <Sun className="w-4 h-4 text-white" />
-            </div>
-            <span className="font-bold text-lg tracking-tight text-slate-800 italic">Prerana.</span>
-          </Link>
-          <nav className="flex items-center gap-6">
-             <Link href="/mission" className="text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-orange-600 transition-colors">Mission</Link>
-             <Link href="/" className="text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-orange-600 transition-colors">Back Home</Link>
-          </nav>
-        </div>
-      </header>
+
 
       <main className="relative z-10">
         
@@ -77,9 +63,9 @@ export default function SuitePage() {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9] text-slate-900 mb-8"
+            className="font-serif text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9] text-slate-900 mb-8"
           >
-            The <span className="italic text-orange-600 font-serif">Suite.</span>
+            The <span className="italic text-orange-600">Suite.</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -116,7 +102,7 @@ export default function SuitePage() {
                       </span>
                     </div>
 
-                    <h2 className="text-4xl font-bold tracking-tight mb-12 italic">{product.name}</h2>
+                    <h2 className="font-serif text-4xl font-bold tracking-tight mb-12 italic">{product.name}</h2>
 
                     <div className="space-y-10">
                        <div>
@@ -135,7 +121,7 @@ export default function SuitePage() {
 
                   <div className="relative z-10 mt-16">
                     {product.status === 'Active' ? (
-                      <Button asChild size="lg" className={`${product.name === 'Vanta.' ? 'bg-white text-black hover:bg-white/90' : 'bg-orange-600 text-white hover:bg-orange-700'} rounded-2xl w-full h-16 text-sm font-bold shadow-xl transition-transform active:scale-95`}>
+                      <Button asChild size="lg" className={`${product.name === 'Vanta.' ? 'bg-white text-black hover:bg-white/90' : product.name === 'Selaras.' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-orange-600 text-white hover:bg-orange-700'} rounded-2xl w-full h-16 text-sm font-bold shadow-xl transition-transform active:scale-95`}>
                         <Link href={product.href} className="flex items-center justify-center gap-2">
                            Explore {product.name}
                            <ArrowUpRight className="w-4 h-4" />
